@@ -193,10 +193,9 @@ So you don't really have to worry about that at all! 😓`,
 
 `Text me please love! ❤️`,
 
-`I created this before you called me last night. And I felt soo relieved you cannot even imagine! You made me feel soo much better! 🥺`,
+`I created this before you called me last night which is why it talks about posting stories 'today'. And I felt soo relieved you cannot even imagine! You made me feel soo much better! 🥺`,
 
 
-`I love you Baby! 😘😍🥰🥺❤️`,
 
 ];
 
@@ -226,12 +225,33 @@ document.getElementById("message").innerHTML=messages[i];
 else{
 
 fireworks();
-document.querySelector('.container').innerHTML=`
-<h1 style="font-size:70px;">❤️</h1>
-<h2 style="color:#ff2d75;font-size:48px;">I love you babe!</h2>
-<p style="font-size:42px;">❤️❤️❤️</p>`;
 
-}
+document.querySelector(".container").innerHTML = `
+<h1 style="font-size:70px;">❤️</h1>
+
+<h2 style="color:#ff2d75;font-size:45px;">
+I love you babe!😘😍🥰🥺
+</h2>
+
+<p style="font-size:40px;">
+❤️❤️❤️
+</p>
+
+<p style="margin-top:25px;font-size:20px;">
+Opening WhatsApp...
+</p>
+`;
+
+setTimeout(() => {
+
+    const message = encodeURIComponent(
+        "I finished reading everything ❤️"
+    );
+
+    window.location.href =
+        `https://wa.me/?text=${message}`;
+
+}, 5000);
 
 }
 
